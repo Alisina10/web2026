@@ -1,1 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("https://cdn.imgchest.com/files/pyvdcd6loyk.png");
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-size: 1400px auto;
+}
+
+.container {
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container > * {
+    background-color: lightblue;
+    font-size: 10rem;
+    color: blue;
+    border: 2px dashed blue;
+    height: 174px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.box1 {
+    flex-basis: 810px;
+}
+
+.box2 {
+    flex-basis: 570px;
+}
+
+.box3 {
+    flex-basis: 1400px;
+}
+
+.box4,
+.box5 {
+    flex-basis: 230px;
+}
+
+.box6 {
+    flex-basis: 900px;
+}
 
