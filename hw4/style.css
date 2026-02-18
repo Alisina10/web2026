@@ -11,10 +11,10 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1276px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
 }
 
 .container > * {
@@ -22,9 +22,11 @@ body {
     font-size: 10rem;
     color: blue;
     border: 2px dashed blue;
-    height: 174px;
+    height: 182px;
     flex-grow: 1;
     flex-shrink: 1;
+    line-height: 1.1;
+    text-indent: 0;
 }
 
 .box1 {
@@ -32,11 +34,11 @@ body {
 }
 
 .box2 {
-    flex-basis: 570px;
+    flex-basis: 450px;
 }
 
 .box3 {
-    flex-basis: 1400px;
+    flex-basis: 1276px;
 }
 
 .box4,
@@ -45,5 +47,5 @@ body {
 }
 
 .box6 {
-    flex-basis: 900px;
+    flex-basis: 780px;
 }
