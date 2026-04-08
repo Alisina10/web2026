@@ -8,7 +8,7 @@
 body {
     background-image: url(https://cdn.imgchest.com/files/myd5crddq4b.png);
     background-repeat: no-repeat;
-    max-width: 1241px;   /* FIXED: was 1143px, corrected to 1241px as per instructor note */
+    max-width: 1241px;  
     min-height: 1583px;
     font-size: 2rem;
     color: blue;
@@ -18,7 +18,7 @@ body {
     border: 2px dashed blue;
 }
 
-/* ── PART D: minmax added to columns & rows so grid stays visible as browser shrinks ── */
+
 .container {
     display: grid;
     grid-template-rows:
@@ -50,10 +50,7 @@ body {
 }
 .box7 { grid-area: seven; }
 
-/* ── PART B & C: Main menu inside Box 6 ── */
 
-/* employment.kg nav bar:
-   transparent background, light text, light pill borders */
 
 .box6 ul {
     font-family: "Open Sans", Arial, sans-serif;
@@ -157,7 +154,7 @@ body {
     }
 }
 
-/* ── PART E: Media Query — single column at 500px or less ── */
+
 @media (max-width: 500px) {
     .container {
         grid-template-columns: 100%;
