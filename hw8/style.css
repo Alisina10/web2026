@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://cdn.imgchest.com/files/myd5crddq4b.png);
+    background-repeat: no-repeat;
+    max-width: 1241px;   /* FIXED: was 1143px, corrected to 1241px as per instructor note */
+    min-height: 1583px;
+    font-size: 2rem;
+    color: blue;
+}
+
+.container > * {
+    border: 2px dashed blue;
+}
+
+/* ── PART D: minmax added to columns & rows so grid stays visible as browser shrinks ── */
+.container {
+    display: grid;
+    grid-template-rows:
+        minmax(40px,  66px)
+        minmax(150px, 294px)
+        minmax(200px, 435px)
+        minmax(150px, 339px)
+        minmax(30px,   60px);
+    grid-template-columns:
+        minmax(100px, 301px)
+        minmax(200px, 569px)
+        minmax(100px, 367px);
+    grid-template-areas:
+        "one   six   six  "
+        "two   two   two  "
+        "three three seven"
+        "four  four  four "
+        "five  five  five ";
+}
+
+.box1 { grid-area: one;   }
+.box2 { grid-area: two;   }
+.box3 { grid-area: three; }
+.box4 { grid-area: four;  }
+.box5 { grid-area: five;  }
+.box6 {
+    grid-area: six;
+    position: relative;
+}
+.box7 { grid-area: seven; }
+
+/* ── PART B & C: Main menu inside Box 6 ── */
+
+/* employment.kg nav bar:
+   transparent background, light text, light pill borders */
+
+.box6 ul {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 11px;
+    left: 294px;
+    width: 604px;
+    height: 31px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* ── Each nav item ── */
+.box6 ul li {
+    position: absolute;
+    top: 0;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    line-height: 3;
+}
+
+/* ADD+ — pill/oval border button */
+.nav-add {
+    top: -1px;
+    left: 0;
+    height: 31px;
+    width: 112px;
+    justify-content: center;
+    text-indent: 0;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 0;
+}
+
+/* JOBS */
+.nav-jobs {
+    left: 130px;
+    width: 31px;
+}
+
+/* SUMMARY */
+.nav-summary {
+    left: 192px;
+    width: 66px;
+}
+
+/* EMPLOYERS */
+.nav-employers {
+    left: 290px;
+    width: 74px;
+}
+
+/* LOGIN/REGISTRATION — pill/oval border button */
+.nav-login {
+    top: -1px;
+    left: 380px;
+    height: 31px;
+    width: 225px;
+    justify-content: center;
+    text-indent: 41px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 0;
+}
+
+@media (max-width: 980px) {
+    .box6 {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .box6 ul {
+        position: static;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 16px;
+    }
+
+    .box6 ul li {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+    .nav-add,
+    .nav-login {
+        justify-content: center;
+        padding: 6px 18px;
+    }
+}
+
+/* ── PART E: Media Query — single column at 500px or less ── */
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "one"
+            "six"
+            "two"
+            "three"
+            "seven"
+            "four"
+            "five";
+    }
+
+    .box6 {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .box6 ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
