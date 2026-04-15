@@ -106,13 +106,7 @@ body {
     padding: 0 24px;
 }
 
-/* ─────────────────────────────────────────────────────────────
-   Part B (Assignment 9): hide hamburger button on desktop
-   Using display:none here on .buttonMenu alone is safe because
-   the Font Awesome fa/fa-bars classes are on the <i> INSIDE the
-   button, not on the button itself, so there is no specificity
-   conflict.
-───────────────────────────────────────────────────────────── */
+
 .buttonMenu {
     display: none;
     background: none;
@@ -131,7 +125,7 @@ body {
     pointer-events: none;
 }
 
-/* ── 980px responsive (unchanged from hw8) ── */
+
 @media (max-width: 980px) {
     .box6 {
         display: flex;
@@ -161,7 +155,6 @@ body {
     }
 }
 
-/* ── 500px mobile (Assignment 9 additions) ── */
 @media (max-width: 500px) {
     body {
         max-width: 100%;
@@ -174,7 +167,7 @@ body {
         height: auto;
     }
 
-    /* Part C: remove "six" from mobile grid so layout is clean without the nav */
+   
     .container {
         width: 100%;
         grid-template-columns: 100%;
@@ -188,13 +181,11 @@ body {
             "five";
     }
 
-    /* Part C: hide the nav by default on mobile */
     .box6 {
         display: none;
     }
 
-    /* Part C: compound selector — show nav as fixed overlay only when
-       JavaScript adds the "mobileMenu" class */
+   
     .box6.mobileMenu {
         display: block;
         position: fixed;
@@ -209,7 +200,7 @@ body {
         padding: 10px;
     }
 
-    /* Part C: make nav items stack vertically inside the mobile overlay */
+   
     .box6 ul {
         display: flex;
         flex-direction: column;
@@ -239,7 +230,6 @@ body {
         padding: 8px 18px;
     }
 
-    /* Part B: show hamburger button on mobile, pinned to top-right corner */
     .buttonMenu {
         display: flex;
         align-items: center;
