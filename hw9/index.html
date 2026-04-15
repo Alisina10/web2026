@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 9</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <!-- Part B: Hamburger button — immediately after opening <body> tag.
+         The fa fa-bars icon goes INSIDE an <i> tag so Font Awesome does NOT
+         override the display:none on the button itself. -->
+    <button class="buttonMenu"><i class="fa fa-bars"></i></button>
+
+    <!-- Target background image placed behind the wireframe -->
+    <img
+      src="https://cdn.imgchest.com/files/j7mmcrxzo76.png"
+      style="position: absolute; top:0; left:0; z-index:-1"
+    />
+
+    <div class="container">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+      <div class="box5">5</div>
+
+      <!-- Box 6: Main navigation menu (employment.kg) -->
+      <div class="box6">
+        <ul>
+          <li class="nav-add">ADD+</li>
+          <li class="nav-jobs">JOBS</li>
+          <li class="nav-summary">SUMMARY</li>
+          <li class="nav-employers">EMPLOYERS</li>
+          <li class="nav-login">LOGIN/REGISTRATION</li>
+        </ul>
+      </div>
+
+      <div class="box7">7</div>
+    </div>
+
+    <!-- Part D: JavaScript toggle — immediately above closing </body> tag -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const buttonMenu = document.querySelector('.buttonMenu')
+        const boxSix = document.querySelector('.box6')
+
+        if (!buttonMenu || !boxSix) {
+          return
+        }
+
+        buttonMenu.addEventListener('click', () => {
+          boxSix.classList.toggle('mobileMenu')
+        })
+      })
+    </script>
+
+  </body>
+</html>
